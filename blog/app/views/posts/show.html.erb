@@ -1,0 +1,20 @@
+ <div id="post_show_content" class="skinny_wrapper wrapper_padding">
+  <header>
+    <p class="date">Friday April 10th</p>
+    <h1><%= @post.title %></h1>
+    <hr>
+  </header>
+</div>
+
+<div id="content">
+  <%= @post.content  %>
+</div>
+
+
+
+<br>
+<br>
+
+<%= link_to "Edit", edit_post_path(@post) %>
+
+<%= link_to "Delete", post_path(@post), method: :delete, date: {confirm: "Are you sure?"} %>

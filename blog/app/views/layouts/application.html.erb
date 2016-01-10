@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Reid - Learn from coding</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+   <header id="main_navigation" class="clearfix">
+    <%= link_to "Reid Ji", root_path, class: "name"%>
+    <nav>
+      <%= link_to "Aritcles", posts_path %>
+      <a href="#">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+   </header>
+   <%= yield %>
+
+  <footer id="main_footer">
+    <p class="copyright"> &copy; 2015 Reid Ji</p>
+    <nav>
+      <a href="#"><i>1</i></a>
+      <a href="#"><i>2</i></a>
+      <a href="#"><i>3</i></a>
+    </nav>
+  </footer>
+</body>
+</html>
